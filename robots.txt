@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /img/
+Disallow: /secondaryImg/
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml
