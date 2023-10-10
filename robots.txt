@@ -3,4 +3,4 @@ Disallow: /img/
 Disallow: /secondaryImg/
 Allow: /
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://github.ivanbeltrame.com/sitemap.xml
