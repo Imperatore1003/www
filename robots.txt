@@ -1,6 +1,6 @@
 User-agent: *
-Disallow: /img/
 Disallow: /secondaryImg/
 Allow: /
+Allow: /img/
 
-Sitemap: https://github.ivanbeltrame.com/sitemap.xml
+Sitemap: https://www.ivanbeltrame.com/sitemap.xml
