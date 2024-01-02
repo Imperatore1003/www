@@ -1,4 +1,6 @@
-const statiCacheName = "site-static-v1";
+const statiCache = "site-static-v1";
+const dynamicCache = "site-dynamic-v1";
+
 const pages = [
     "/",
     "/404",
@@ -77,12 +79,15 @@ const thirdParty = [
     "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css",
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 ];
+const files = [
+    "manifest.json"
+];
 
 // Install service worker
 self.addEventListener("install", evt => {
     console.log("Service worker has been installed");
     evt.waitUntil(
-        caches.open(statiCacheName).then(cache => {
+        caches.open(statiCache).then(cache => {
             console.log("Caching shell assets");
             cache.addAll(pages);
             cache.addAll(pagesFullURL);
@@ -90,6 +95,7 @@ self.addEventListener("install", evt => {
             cache.addAll(cssS);
             cache.addAll(imgs);
             cache.addAll(thirdParty);
+            cache.addAll(files);
         })
     );
 });
@@ -100,7 +106,7 @@ self.addEventListener("activate", evt => {
     evt.waitUntil(
         caches.keys().then(keys => {
             return Promise.all(keys
-                .filter(key => key !== statiCacheName)
+                .filter(key => key !== statiCache)
                 .map(key => caches.delete(key))
             );
         })
@@ -112,7 +118,12 @@ self.addEventListener("fetch", evt => {
     console.log("Fetch event", evt);
     evt.respondWith(
         caches.match(evt.request).then(cacheRes => {
-            return cacheRes || fetch(evt.request);
+            return cacheRes || fetch(evt.request).then(fetchRes => {
+                return caches.open(dynamicCache).then(cache => {
+                    cache.put(evt.request.url, fetchRes.clone());
+                    return fetchRes;
+                })
+            });
         })
     );
 });
