@@ -97,6 +97,14 @@ self.addEventListener("install", evt => {
 // Activate service worker event
 self.addEventListener("activate", evt => {
     console.log("Service worker has been activated");
+    evt.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys
+                .filter(key => key !== statiCacheName)
+                .map(key => caches.delete(key))
+            );
+        })
+    );
 });
 
 // Fetch to service worker event
