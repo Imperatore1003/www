@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /secondaryImg/
+Disallow: /404
 Allow: /
 Allow: /img/
 
