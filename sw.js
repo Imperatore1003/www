@@ -6,14 +6,16 @@ const pages = [
     "/404",
     "/certificati",
     "/contatti",
-    "/privacy-policy"
+    "/privacy-policy",
+    "/fallback",
 ];
 const pagesFullURL = [
     "/",
     "/404.html",
     "/certificati.html",
     "/contatti.html",
-    "/privacy-policy.html"
+    "/privacy-policy.html",
+    "/fallback.html"
 ];
 const jsS = [
     "/js/app.js"
@@ -106,7 +108,7 @@ self.addEventListener("activate", evt => {
     evt.waitUntil(
         caches.keys().then(keys => {
             return Promise.all(keys
-                .filter(key => key !== statiCache)
+                .filter(key => key !== statiCache && key !== dynamicCache)
                 .map(key => caches.delete(key))
             );
         })
@@ -124,6 +126,6 @@ self.addEventListener("fetch", evt => {
                     return fetchRes;
                 })
             });
-        })
+        }).catch(() => caches.match("/fallback.html"))
     );
 });
