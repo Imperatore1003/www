@@ -1,4 +1,4 @@
-const cacheVersion = "v2";
+const cacheVersion = "v3";
 const statiCache = "site-static-" + cacheVersion;
 const dynamicCache = "site-dynamic-" + cacheVersion;
 
@@ -128,6 +128,10 @@ self.addEventListener("fetch", evt => {
                     return fetchRes;
                 })
             });
-        }).catch(() => caches.match("/fallback.html"))
+        }).catch(() => {
+            if (evt.request.headers.get("accept").includes("text/html")) {
+                return caches.match("/fallback.html");
+            }
+        })
     );
 });
