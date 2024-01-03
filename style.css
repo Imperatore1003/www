@@ -33,3 +33,7 @@
 .carousel-control-prev-icon {
   filter: invert(1);
 }
+
+.immagine-errore {
+    max-width: 30em;
+}
