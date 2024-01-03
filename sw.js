@@ -1,5 +1,6 @@
-const statiCache = "site-static-v1";
-const dynamicCache = "site-dynamic-v1";
+const cacheVersion = "v2";
+const statiCache = "site-static-" + cacheVersion;
+const dynamicCache = "site-dynamic-" + cacheVersion;
 
 const pages = [
     "/",
