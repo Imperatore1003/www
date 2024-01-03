@@ -37,3 +37,18 @@
 .immagine-errore {
     max-width: 30em;
 }
+
+.video-player {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+}
+.video-player .copertina-video {
+    min-width: 250px;
+}
+.video-player .pulsante-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
