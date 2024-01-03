@@ -28,6 +28,7 @@ const imgs = [
     "/img/404.jpg",
     "/img/favicon.png",
     "/img/icon.jpg",
+    "/img/fallback.png",
     "/img/touch/icon48.png",
     "/img/touch/icon72.png",
     "/img/touch/icon96.png",
