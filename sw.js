@@ -1,4 +1,4 @@
-const cacheVersion = "v3";
+const cacheVersion = "v4";
 const statiCache = "site-static-" + cacheVersion;
 const dynamicCache = "site-dynamic-" + cacheVersion;
 
@@ -36,6 +36,8 @@ const imgs = [
     "/img/touch/icon168.png",
     "/img/touch/icon192.png",
     "/img/touch/icon512.png",
+    "/img/ivanmusic-thumbnail.jpg",
+    "/img/ivanweather-thumbnail.jpg",
     "/img/certs/grasshooper/animations.png",
     "/img/certs/grasshooper/animations2.png",
     "/img/certs/grasshooper/array-methods.png",
