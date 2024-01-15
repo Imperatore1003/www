@@ -19,7 +19,8 @@ const pagesFullURL = [
     "/fallback.html"
 ];
 const jsS = [
-    "/js/app.js"
+    "/js/app.js",
+    "/js/main.js"
 ];
 const cssS = [
     "/style.css"
