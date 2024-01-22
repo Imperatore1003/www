@@ -1,4 +1,4 @@
-const cacheVersion = "v9";
+const cacheVersion = "v10";
 const statiCache = "site-static-" + cacheVersion;
 const dynamicCache = "site-dynamic-" + cacheVersion;
 
@@ -87,7 +87,7 @@ const thirdParty = [
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 ];
 const files = [
-    "manifest.json"
+    "/manifest.json"
 ];
 
 // Cache size limit function
