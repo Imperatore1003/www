@@ -1,4 +1,4 @@
-const cacheVersion = "v11";
+const cacheVersion = "v12";
 const statiCache = "site-static-" + cacheVersion;
 const dynamicCache = "site-dynamic-" + cacheVersion;
 
@@ -9,6 +9,7 @@ const pages = [
     "/contatti",
     "/privacy-policy",
     "/fallback",
+    "/ca"
 ];
 const pagesFullURL = [
     "/",
@@ -16,7 +17,8 @@ const pagesFullURL = [
     "/certificati.html",
     "/contatti.html",
     "/privacy-policy.html",
-    "/fallback.html"
+    "/fallback.html",
+    "/ca.html"
 ];
 const jsS = [
     "/js/app.js",
@@ -89,6 +91,16 @@ const thirdParty = [
 const files = [
     "/manifest.json"
 ];
+const certificateAuthority = [
+    "/ca/Ivan_Beltrame_People_CA_chain.crt",
+    "/ca/Ivan_Beltrame_People_CA.crt",
+    "/ca/Ivan_Beltrame_Root_CA.crt",
+    "/ca/Ivan_Beltrame_Servers_CA.crt",
+    "/ca/Ivan_Beltrame_Servers_CA_chain.crt",
+    "/crl/ca.crl",
+    "/crl/servers.crl",
+    "/crl/people.crl"
+];
 
 // Cache size limit function
 const limitCacheSize = (name, size) => {
@@ -114,6 +126,7 @@ self.addEventListener("install", evt => {
             cache.addAll(imgs);
             cache.addAll(thirdParty);
             cache.addAll(files);
+            cache.addAll(certificateAuthority);
         })
     );
 });
