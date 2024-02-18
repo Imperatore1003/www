@@ -8,3 +8,6 @@ if (month === 1 && day === 14) {
 
 // Calculate my experience years
 document.getElementById("experience-years").innerHTML = new Date().getFullYear() - 2017;
+
+const toastLiveExample = document.getElementById('liveToastIvanWeather');
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample).show();
