@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.ivanbeltrame.app",
+               "sha256_cert_fingerprints": ["2F:D4:9F:2B:E8:1F:44:C2:0C:BF:FB:50:70:AD:E8:EC:CB:CE:5B:14:40:DC:DB:29:D7:00:E7:08:28:FA:90:1A"] }
+}]
