@@ -7,7 +7,6 @@ const pages = [
     "/404",
     "/certificati",
     "/contatti",
-    "/privacy-policy",
     "/fallback",
     "/ca"
 ];
@@ -16,7 +15,6 @@ const pagesFullURL = [
     "/404.html",
     "/certificati.html",
     "/contatti.html",
-    "/privacy-policy.html",
     "/fallback.html",
     "/ca.html"
 ];
