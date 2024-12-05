@@ -1,5 +1,5 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.ivanbeltrame.app",
-               "sha256_cert_fingerprints": ["2F:D4:9F:2B:E8:1F:44:C2:0C:BF:FB:50:70:AD:E8:EC:CB:CE:5B:14:40:DC:DB:29:D7:00:E7:08:28:FA:90:1A"] }
+  "target" : { "namespace": "android_app", "package_name": "com.ivanbeltrame.twa.www",
+               "sha256_cert_fingerprints": ["EC:98:85:DD:94:D3:79:9C:AB:B8:32:CD:2C:00:99:C3:C2:4D:6D:21:CE:B1:8C:ED:61:4E:B1:3C:8D:6D:5F:DB"] }
 }]
