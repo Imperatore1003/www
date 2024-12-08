@@ -10,6 +10,7 @@
     "display": "minimal-ui",
     "dir": "ltr",
     "lang": "it",
+    "categories": ["utilities", "games"],
     "description": "Il mio sito personale dove puoi trovare qualche fatto su di me, vedere i miei certificati e navigare sui miei siti",
     "icons": [
       {
@@ -110,5 +111,8 @@
             "form_factor": "narrow",
             "label": "Pagina dei contatti visitata da un telefono"
         }
+    ],
+    "scope_extensions": [
+        {"origin": "*.ivanbeltrame.com"}
     ]
 }
