@@ -77,5 +77,38 @@
         "url": "/contatti?pwa=contatti",
         "description": ""
       }
+    ],
+    "launch_handler": {
+        "client_mode": ["navigate-existing", "auto"]
+    },
+    "screenshots": [
+        {
+            "src": "screenshots/home-mobile.jpg",
+            "sizes": "1080x2400",
+            "type": "image/jpeg",
+            "form_factor": "narrow",
+            "label": "Home visitata da un telefono"
+        },
+        {
+            "src": "screenshots/progetti-mobile.jpg",
+            "sizes": "1080x2400",
+            "type": "image/jpeg",
+            "form_factor": "narrow",
+            "label": "Pagina dei progetti visitata da un telefono"
+        },
+        {
+            "src": "screenshots/certificati-mobile.jpg",
+            "sizes": "1080x2400",
+            "type": "image/jpeg",
+            "form_factor": "narrow",
+            "label": "Pagina dei certificati visitata da un telefono"
+        },
+        {
+            "src": "screenshots/contatti-mobile.jpg",
+            "sizes": "1080x2400",
+            "type": "image/jpeg",
+            "form_factor": "narrow",
+            "label": "Pagina dei contatti visitata da un telefono"
+        }
     ]
-  }
+}
