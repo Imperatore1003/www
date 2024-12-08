@@ -1,4 +1,4 @@
-const cacheVersion = "v28";
+const cacheVersion = "v29";
 const statiCache = "site-static-" + cacheVersion;
 const dynamicCache = "site-dynamic-" + cacheVersion;
 
@@ -79,7 +79,11 @@ const imgs = [
     "/img/certs/sololearn/php.jpg",
     "/img/certs/sololearn/python.png",
     "/img/certs/sololearn/responsive-web-design.jpg",
-    "/img/certs/sololearn/sql.png"
+    "/img/certs/sololearn/sql.png",
+    "/img/screenshots/home-mobile.jpg",
+    "/img/screenshots/certificati-mobile.jpg",
+    "/img/screenshots/contatti-mobile.jpg",
+    "/img/screenshots/progetti-mobile.jpg"
 ];
 const thirdParty = [
     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css",
